@@ -26,15 +26,25 @@ const questions = {
 const startButton = document.getElementById("start-btn");
 const questionContainer = document.getElementById("question");
 const answerOptions = document.querySelectorAll(".btn");
+const checkAnswer = document.getElementById("eva-btn");
+const checkAn = document.getElementById("answer-buttons");
 /*---------------- event listeners ------------*/
 // startButton.addEventListener("click", startGame);
+
+checkAn.addEventListener("click", function (evt) {
+  let y = evt.target;
+  console.log(y);
+  for (let i = 0; i < questions.answers.length; i++) {
+    console.log(questions.answers[i]);
+  }
+});
 
 /*---------------------- function -----------------*/
 function startGame() {
   questionContainer.innerHTML = `${questions.question}`;
   let answerList = questions.answers.forEach(function (el, ind) {
     answerOptions[ind].innerHTML = el.text;
-    console.log(answerOptions[ind].innerHTML);
+    // console.log(answerOptions[ind].innerHTML);
     console.log(el.text);
   });
 }
@@ -43,5 +53,8 @@ startGame();
 
 //   setNextQuestion();
 
-function setNextQuestion() {}
-setNextQuestion();
+function checkA() {
+  if (answers.correct) {
+  }
+}
+checkA();
