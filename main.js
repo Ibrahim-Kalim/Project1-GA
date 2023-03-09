@@ -37,10 +37,18 @@ const btn = document.getElementById("btn"); // got the button by its id
 
 /*---------------------- function -----------------*/
 function loadQuizDataAndStart() {
-  const currentQuizInfo = quizData[currentQuiz];
-  question.innerHTML = currentQuizInfo.question;
-}
+  if (currentQuiz < quizData.length) {
+    const currentQuizInfo = quizData[currentQuiz];
+    question.innerHTML = currentQuizInfo.question;
+    question.innerText = currentQuizInfo.question;
+    a_text.innerText = currentQuizInfo.a;
+    b_text.innerText = currentQuizInfo.b;
+    c_text.innerText = currentQuizInfo.c;
+    d_text.innerText = currentQuizInfo.d;
+  } else {
+    quiz.innerHTML = `
+  <h3 class= "score_text">You have answered ${score}/${quizData.length}</h3>
+  <button class="btn_btn_start" onClick="location.reload()">Restart</button>`;
+  }
+};
 
-startGame();
-
-//   setNextQuestion();
