@@ -13,7 +13,7 @@ const quizData = [
     question: "What is the capital of Thailand?",
     a: "Bangkok",
     b: "Hanoi",
-    c: "Caracas",
+    c: "Egypt",
     d: "Bogota",
     correct: "d",
   },
@@ -38,6 +38,8 @@ btn.addEventListener("click", function () {
   const answer = getCheckedAnswer(); // answer is a funtion to get the answer thorugh forEch loop in order to the checked answer to compare with the corect answer
   console.log(answer);
   if (answer == quizData[currentQuiz].correct) score++; // to add to score varible 1 each time you answer the quez
+  currentQuiz++; // add one queiz each time to hit submit
+  loadQuizDataAndStart(); // added loadQuiz function in order to load the next quiz
 });
 
 /*---------------------- function -----------------*/
