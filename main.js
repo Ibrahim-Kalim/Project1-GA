@@ -36,6 +36,7 @@ const btn = document.getElementById("btn"); // got the button by its id
 /*---------------- event listeners ------------*/
 
 /*---------------------- function -----------------*/
+// created function to load question
 function loadQuizDataAndStart() {
   if (currentQuiz < quizData.length) {
     const currentQuizInfo = quizData[currentQuiz];
