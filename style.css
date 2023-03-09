@@ -7,7 +7,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 nav {
   background-color: white;
@@ -18,6 +17,7 @@ nav {
 nav h1 a {
   color: rgb(209, 225, 225);
   font-weight: 600;
+  text-decoration: none;
   font-size: 1.5rem;
 }
 .quiz-container {
@@ -43,4 +43,21 @@ li {
   display: flex;
   align-items: center;
   margin: 0.4rem 0;
+}
+label {
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+#btn {
+  width: 100%;
+  background-color: rgb(19, 209, 63);
+  border: none;
+  padding: 14px;
+  color: rgb(224, 15, 15);
+  font-size: 1.5rem;
+  border-radius: 6px;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }

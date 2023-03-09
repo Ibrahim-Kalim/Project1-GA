@@ -2,20 +2,28 @@
 //created object that have all question
 const quizData = [
   {
-    question: "Where is the hightest mountain in the world located?",
-    a: "Nepal",
-    b: "Denali",
-    c: "Dubai",
-    d: "India",
-    correct: "a",
+    question: "In which Italian city can you find the Colosseum?",
+    a: "Venice",
+    b: "Rome",
+    c: "Naples",
+    d: "Milan",
+    correct: "b",
   },
   {
-    question: "What is the capital of Thailand?",
-    a: "Bangkok",
-    b: "Hanoi",
-    c: "Egypt",
-    d: "Bogota",
-    correct: "d",
+    question: "What is the largest active volcano in the world?",
+    a: "Mount Etna",
+    b: "Mount Vesuvius",
+    c: "Mouna Loa",
+    d: "Mount Batur",
+    correct: "c",
+  },
+  {
+    question: "What is the largest continent in size?",
+    a: "Asia",
+    b: "Africa",
+    C: "Europe",
+    d: "North America",
+    correct: "a",
   },
 ];
 
@@ -52,7 +60,8 @@ function loadQuizDataAndStart() {
     b_text.innerText = currentQuizInfo.b; // display the choice from object to inside html li chice
     c_text.innerText = currentQuizInfo.c; // display the choice from object to inside html li chice
     d_text.innerText = currentQuizInfo.d; // display the choice from object to inside html li chice
-  } else { // if there there is no more quiz to load created button to restart the gaem
+  } else {
+    // if there there is no more quiz to load created button to restart the gaem
     quiz.innerHTML = `
   <h3 class= "score_text">You have answered ${score}/${quizData.length}</h3>
   <button class="btn_btn_start" onClick="location.reload()">Restart</button>`;
