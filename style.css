@@ -16,7 +16,13 @@ nav {
 }
 
 nav h1 a {
-  color: aqua;
+  color: rgb(209, 225, 225);
   font-weight: 600;
   font-size: 1.5rem;
+}
+.quiz-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  margin: 25px 8px;
 }
