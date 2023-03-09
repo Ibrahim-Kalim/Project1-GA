@@ -52,7 +52,7 @@ function loadQuizDataAndStart() {
     b_text.innerText = currentQuizInfo.b; // display the choice from object to inside html li chice
     c_text.innerText = currentQuizInfo.c; // display the choice from object to inside html li chice
     d_text.innerText = currentQuizInfo.d; // display the choice from object to inside html li chice
-  } else {
+  } else { // if there there is no more quiz to load created button to restart the gaem
     quiz.innerHTML = `
   <h3 class= "score_text">You have answered ${score}/${quizData.length}</h3>
   <button class="btn_btn_start" onClick="location.reload()">Restart</button>`;
@@ -62,7 +62,7 @@ loadQuizDataAndStart();
 
 // created function to ckeck the answer to check whic choices the player chose only by looping through all the choices
 function getCheckedAnswer() {
-  let answer = undefined;
+  let answer = 0;
   // usging the answerLi that catched all the answers (li elemnt) choices from choices
   answerLi.forEach((el) => {
     if (el.checked) {
