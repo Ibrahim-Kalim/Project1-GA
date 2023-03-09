@@ -34,7 +34,11 @@ const d_text = document.getElementById("d_text");
 const btn = document.getElementById("btn"); // got the button by its id
 
 /*---------------- event listeners ------------*/
-btn.addEventListener("click", ())
+btn.addEventListener("click", function(){
+    const answer = getCheckedAnswer();// have to create a funtion to get the answer in order to compare with the corect answer
+    if (answer == quizData[currentQuiz].correct)
+    score++; // to add to score varible 1 each time you answer the quez
+})
 
 /*---------------------- function -----------------*/
 // created function to load question
