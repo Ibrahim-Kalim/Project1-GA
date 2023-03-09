@@ -25,6 +25,11 @@ const quizData = [
 const quiz = document.getElementById("quiz"); //get the id queiz that hold the question
 const answerLi = document.querySelectorAll(".answer"); // got all answer by queryselector
 const question = document.getElementById("question");// got the h2 by its id
+const a_text = document.getElementById("a_text"); //choice of each answer
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const btn = document.getElementById("btn");
 
 /*---------------- event listeners ------------*/
 // startButton.addEventListener("click", startGame);
