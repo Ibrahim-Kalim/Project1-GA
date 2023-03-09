@@ -1,5 +1,6 @@
 /*-------------- Constants ---------------*/
-const questions = [
+//created object that have all question
+const quizData = [
   {
     question: "Where is the hightest mountain in the world located?",
     a: "Nepal",
@@ -21,30 +22,13 @@ const questions = [
 /*-------------------- app's state (variables) ----------- */
 
 /*---------------- cached element ----------------*/
-const startButton = document.getElementById("start-btn");
-const questionContainer = document.getElementById("question");
-const answerOptions = document.querySelectorAll(".btn");
-const checkAnswer = document.getElementById("eva-btn");
-const checkAn = document.getElementById("answer-buttons");
+const quiz = document.getElementById("quiz"); //get the id queiz that hold the question
+const answerLi = document.querySelectorAll(".answer"); // got all answer by queryselector
+const question = document.getElementById("question");// got the h2 by its id
+
 /*---------------- event listeners ------------*/
 // startButton.addEventListener("click", startGame);
 
-checkAn.addEventListener("click", function (evt) {
-  let eventTarget = evt.target.textContent;
-  console.log(eventTarget);
-  questions.answers.forEach(function (el, ind) {
-    if (eventTarget === el.correct) {
-      console.log(answers.correct);
-    }
-  });
-  //   for (let i = 0; i < questions.answers.length; i++) {
-
-  // //     let answerResult = [];
-  //     answerResult += questions.answers[i];
-  // //     if (eventTarget === answerResult) {
-  // //     }
-  //   }
-});
 
 /*---------------------- function -----------------*/
 function startGame() {
