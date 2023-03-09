@@ -32,11 +32,20 @@ const checkAn = document.getElementById("answer-buttons");
 // startButton.addEventListener("click", startGame);
 
 checkAn.addEventListener("click", function (evt) {
-  let y = evt.target;
-  console.log(y);
-  for (let i = 0; i < questions.answers.length; i++) {
-    console.log(questions.answers[i]);
-  }
+  let eventTarget = evt.target.textContent;
+  console.log(eventTarget);
+  questions.answers.forEach(function (el, ind) {
+    if (eventTarget === el.correct) {
+      console.log(answers.correct);
+    }
+  });
+  //   for (let i = 0; i < questions.answers.length; i++) {
+
+  // //     let answerResult = [];
+  //     answerResult += questions.answers[i];
+  // //     if (eventTarget === answerResult) {
+  // //     }
+  //   }
 });
 
 /*---------------------- function -----------------*/
@@ -52,9 +61,3 @@ function startGame() {
 startGame();
 
 //   setNextQuestion();
-
-function checkA() {
-  if (answers.correct) {
-  }
-}
-checkA();
