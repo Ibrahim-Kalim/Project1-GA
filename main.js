@@ -34,11 +34,11 @@ const d_text = document.getElementById("d_text");
 const btn = document.getElementById("btn"); // got the button by its id
 
 /*---------------- event listeners ------------*/
-btn.addEventListener("click", function(){
-    const answer = getCheckedAnswer();// have to create a funtion to get the answer in order to compare with the corect answer
-    if (answer == quizData[currentQuiz].correct)
-    score++; // to add to score varible 1 each time you answer the quez
-})
+btn.addEventListener("click", function () {
+  const answer = getCheckedAnswer(); // answer is a funtion to get the answer thorugh forEch loop in order to the checked answer to compare with the corect answer
+  console.log(answer);
+  if (answer == quizData[currentQuiz].correct) score++; // to add to score varible 1 each time you answer the quez
+});
 
 /*---------------------- function -----------------*/
 // created function to load question
@@ -57,3 +57,15 @@ function loadQuizDataAndStart() {
   }
 }
 loadQuizDataAndStart();
+
+// created function to ckeck the answer to check whic choices the player chose only by looping through all the choices
+function getCheckedAnswer() {
+  let answer = undefined;
+  // usging the answerLi that catched all the answers (li elemnt) choices from choices
+  answerLi.forEach((el) => {
+    if (el.checked) {
+      answer = el.id;
+    }
+  });
+  return answer;
+}
