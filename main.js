@@ -20,6 +20,8 @@ const quizData = [
 ];
 
 /*-------------------- app's state (variables) ----------- */
+let currentQuiz = 0; // to follow which quiz am I
+let score = 0; // to start score by 0 and later to add up
 
 /*---------------- cached element ----------------*/
 const quiz = document.getElementById("quiz"); //get the id queiz that hold the question
@@ -29,19 +31,14 @@ const a_text = document.getElementById("a_text"); // get the choice li by the id
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
-const btn = document.getElementById("btn") // got the button by its id
+const btn = document.getElementById("btn"); // got the button by its id
 
 /*---------------- event listeners ------------*/
 
-
 /*---------------------- function -----------------*/
-function startGame() {
-  questionContainer.innerHTML = `${questions.question}`;
-  let answerList = questions.answers.forEach(function (el, ind) {
-    answerOptions[ind].innerHTML = el.text;
-    // console.log(answerOptions[ind].innerHTML);
-    console.log(el.text);
-  });
+function loadQuizDataAndStart() {
+  const currentQuizInfo = quizData[currentQuiz];
+  question.innerHTML = currentQuizInfo.question;
 }
 
 startGame();
