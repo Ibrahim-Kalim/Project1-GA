@@ -1,24 +1,22 @@
 /*-------------- Constants ---------------*/
-const questions = {
-  question: "Where is the hightest mountain in the world located?",
-  answers: [
-    { text: "Nepal", correct: true },
-    { text: "Denali", correct: false },
-    { text: "Dubai", correct: false },
-    { text: "India", correct: false },
-  ],
-};
-
-//   {
-//     question: "What is the capital of Thailand?",
-//     answers: [
-//       { text: "Bangkok", correct: true },
-//       { text: "Hanoi", correct: false },
-//       { text: "Caracas", correct: false },
-//       { text: "Bogota", correct: false },
-//     ],
-//   },
-// ];
+const questions = [
+  {
+    question: "Where is the hightest mountain in the world located?",
+    a: "Nepal",
+    b: "Denali",
+    c: "Dubai",
+    d: "India",
+    correct: "a",
+  },
+  {
+    question: "What is the capital of Thailand?",
+    a: "Bangkok",
+    b: "Hanoi",
+    c: "Caracas",
+    d: "Bogota",
+    correct: "d",
+  },
+];
 
 /*-------------------- app's state (variables) ----------- */
 
