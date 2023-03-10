@@ -15,7 +15,6 @@ nav {
 }
 
 nav h1 a {
-  color: rgb(209, 225, 225);
   font-weight: 600;
   text-decoration: none;
   font-size: 1.5rem;
@@ -43,6 +42,7 @@ li {
   display: flex;
   align-items: center;
   margin: 0.4rem 0;
+  color: #ff5722;
 }
 label {
   font-size: 1.2rem;
@@ -65,4 +65,13 @@ label {
   color: rgb(224, 210, 15);
   font-size: 1.5rem;
   border-radius: 6px;
+}
+h2 {
+  color: aqua;
+}
+h3 {
+  font-size: 1.5rem;
+  border-radius: 6px;
+  padding: 62px;
+  color: #4caf50;
 }
