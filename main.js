@@ -23,6 +23,14 @@ const quizData = [
     d: "North America",
     correct: "a",
   },
+  {
+  question: "What is the only food that cannot go bad?",
+  a:"Dark chocolate",
+  b: "Peanut butter",
+  c: "Canned tuna",
+  d: "Honey",
+  correct: "d",
+  }
 ];
 
 let currentQuiz = 0;
