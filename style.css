@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(82, 151, 172);
 }
 nav {
   background-color: white;
@@ -41,12 +42,12 @@ ul {
 li {
   display: flex;
   align-items: center;
-  margin: 0.4rem 0;
+  margin: 5px;
   color: #ff5722;
 }
 label {
   font-size: 1.2rem;
-  margin-left: 8px;
+  margin-left: 9px;
 }
 #btn {
   width: 100%;
