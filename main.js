@@ -65,7 +65,7 @@ function loadQuiz() {
     d_text.innerText = currentQuizInfo.d;
   } else {
     quiz.innerHTML = `
-  <h3 class= "score_text">You have answered ${score}/${quizData.length}</h3>
+  <h3 class= "score_text">You have answered ${score} < ${quizData.length} try again</h3>
   <button class="btn_btn_start" onClick="location.reload()">Restart</button>`;
   }
 }

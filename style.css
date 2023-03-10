@@ -60,10 +60,6 @@ label {
   color: rgb(224, 15, 15);
   font-size: 1.5rem;
   border-radius: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  -ms-border-radius: 9px;
-  -o-border-radius: 9px;
 }
 .btn_btn_start {
   width: 100%;
