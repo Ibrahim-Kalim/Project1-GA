@@ -45,7 +45,7 @@ const btn = document.getElementById("btn"); // got the button by its id
 btn.addEventListener("click", function () {
   const answer = getCheckedAnswer(); // answer is a funtion to get the answer thorugh forEch loop in order to the checked answer to compare with the corect answer
   console.log(answer);
-  if (answer == quizData[currentQuiz].correct) score++; // to add to score varible 1 each time you answer the quez
+  if (answer === quizData[currentQuiz].correct) score++; // to add to score varible 1 each time you answer the quez
   currentQuiz++; // add one queiz each time to hit submit
   loadQuizDataAndStart(); // added loadQuiz function in order to load the next quiz
 });
