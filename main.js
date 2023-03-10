@@ -29,7 +29,6 @@ let currentQuiz = 0;
 let score = 0;
 let answer = 0;
 
-const quiz = document.getElementById("quiz");
 const answerLi = document.querySelectorAll(".answer");
 const question = document.getElementById("question");
 const a_text = document.getElementById("a_text"); //
