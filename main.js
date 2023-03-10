@@ -30,6 +30,7 @@ const quizData = [
 /*-------------------- app's state (variables) ----------- */
 let currentQuiz = 0; // to follow which quiz am I
 let score = 0; // to start score by 0 and later to add up
+let answer = 0;
 
 /*---------------- cached element ----------------*/
 const quiz = document.getElementById("quiz"); //get the id queiz that hold the question
@@ -43,11 +44,13 @@ const btn = document.getElementById("btn"); // got the button by its id
 
 /*---------------- event listeners ------------*/
 btn.addEventListener("click", function () {
-  const answer = getCheckedAnswer(); // answer is a funtion to get the answer thorugh forEch loop in order to the checked answer to compare with the corect answer
+  answer = getCheckedAnswer(); // answer is a funtion to get the answer thorugh forEch loop in order to the checked answer to compare with the corect answer
   console.log(answer);
   if (answer === quizData[currentQuiz].correct) score++; // to add to score varible 1 each time you answer the quez
   currentQuiz++; // add one queiz each time to hit submit
+
   loadQuizDataAndStart(); // added loadQuiz function in order to load the next quiz
+  deSelect();
 });
 
 /*---------------------- function -----------------*/
@@ -69,9 +72,14 @@ function loadQuizDataAndStart() {
 }
 loadQuizDataAndStart();
 
+function deSelect() {
+  answerLi.forEach((ele) => {
+    ele.checked = false;
+  });
+}
+
 // created function to ckeck the answer to check whic choices the player chose only by looping through all the choices
 function getCheckedAnswer() {
-  let answer = 0;
   // usging the answerLi that catched all the answers (li elemnt) choices from choices
   answerLi.forEach((el) => {
     if (el.checked) {
