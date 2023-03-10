@@ -24,13 +24,13 @@ const quizData = [
     correct: "a",
   },
   {
-  question: "What is the only food that cannot go bad?",
-  a:"Dark chocolate",
-  b: "Peanut butter",
-  c: "Canned tuna",
-  d: "Honey",
-  correct: "d",
-  }
+    question: "What is the only food that cannot go bad?",
+    a: "Dark chocolate",
+    b: "Peanut butter",
+    c: "Canned tuna",
+    d: "Honey",
+    correct: "d",
+  },
 ];
 
 let currentQuiz = 0;
@@ -51,11 +51,11 @@ btn.addEventListener("click", function () {
   if (answer === quizData[currentQuiz].correct) score++;
   currentQuiz++;
 
-  loadQuizDataAndStart();
+  loadQuiz();
   deSelect();
 });
 
-function loadQuizDataAndStart() {
+function loadQuiz() {
   if (currentQuiz < quizData.length) {
     const currentQuizInfo = quizData[currentQuiz];
     question.innerText = currentQuizInfo.question;
@@ -69,7 +69,7 @@ function loadQuizDataAndStart() {
   <button class="btn_btn_start" onClick="location.reload()">Restart</button>`;
   }
 }
-loadQuizDataAndStart();
+loadQuiz();
 
 function deSelect() {
   answerLi.forEach((ele) => {
